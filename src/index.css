@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  background: white;
+}
+
+header {
+  padding: 15px;
+  text-align: left;
+  background: whitesmoke;
+  color: black;
+  font-size: 16px;
+}
+
+.author {
+  margin-top: -24px;
+}
+
+nav {
+  background: darkslateblue;
+  overflow: hidden;
+}
+
+nav ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  float: left;
+}
+
+.navlink {
+  display: block;
+  padding: 16px 32px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+nav li:hover {
+  background-color: lightblue;
+}
+
+.navleft {
+  float: left;
+}
+
+.navright {
+  float: right
+}
+
+.container {
+  width: 100%;
+  height: auto;
+}
+
+.GENERAL {
+  height: 100%;
+}
+
+.STORE {
+
+}
+
+.product { 
+  background-color: whitesmoke;
+  float: left;
+  width: 175px;
+  height: 250px;
+  color: black;
+}
+
+.productImage {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin-left: 6%;
+  margin-top: 6%
+}
+
+.ratings {
+  margin-top: -9%;
+  text-align: center;
+}
+
+.productTitle {
+  text-align: center;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  margin-top: 1.5%;
+  
+}
+
+.price {
+  text-align: center;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  margin-top: -12%;
+  
+}
+
+
+
+.stock {
+  text-align: center;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  margin-top: -12%
+}
+
+.quote {
+  text-align: center;
+}
+
+footer {
+  background: darkgray;
+  color: black;
+  padding: 8px;
+  display: block;
+  text-align: center;
+
+}
