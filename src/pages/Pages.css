@@ -1,0 +1,298 @@
+#contact a, #services a {
+    text-decoration: none;
+    color: blueviolet;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.story {
+    text-align: center;
+}
+
+.story * {
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#instagramicon {
+    color: darkslategray;
+}
+
+#linkedinicon {
+    
+}
+
+#twittericon {
+    
+}
+
+#emailicon {
+    color: black;
+}
+
+#robloxicon {
+    color:red;
+}
+
+@media only screen and (min-width: 1024px) {
+    .page {
+        padding: 0;
+        min-height: calc(100vh - 210px);
+        background-color: whitesmoke;
+    }
+
+    .story .title {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        width: 500px;
+        border-bottom: 1px solid black;
+    }
+
+    #home .story .bio #bio_name {
+        text-align: right;
+        grid-area: zero;
+    }
+
+    #home .story .bio {
+        padding-left: 500px;
+        display: grid;
+        grid-template-areas: 
+        "one zero"
+        "one two";
+        grid-template-columns: 150px 375px;
+        padding-top: 150px;
+        text-align: left;
+    }
+
+    .story .bio #bio_pic {
+        grid-area: one;
+        height: 150px;
+        width: 150px;
+        background: url("../imgs/joshua.jpg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        display: block;
+    }
+
+    #home .story .bio #bio_desc{
+        grid-area: two;
+        width: 600px;
+        height: 150px;
+    }
+
+    #home .story .bio #bio_desc li{
+        float: left;
+        padding-right: 30px;
+    }
+
+    #home .story .bio #bio_desc li:nth-child(2n+3){
+        clear: left;
+    }
+
+
+    .story .description {
+        padding: 10px;
+    }
+    
+    .story .description * {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .story .description .chunk {
+        padding-bottom: 30px;
+    }
+
+    #about .story {
+        padding-top:5vh;
+        border-bottom: 1px solid black;
+        width: 600px;
+        margin-left: 30%;
+    }
+
+    #about .story .description ul, .story .description ol {
+        padding-left: 10px;
+        display: grid;
+    }
+
+    #about .story .description ul li:nth-child(1), .story .description ol li:nth-child(1) {
+        padding-top: 5px;
+    }
+    
+    #about .story .description ol li:nth-child(1n+3) {
+        padding-top: 15px;
+    }
+
+    #about .story .description ol :not(li, h3) {
+        inline-size: 250px;
+    }
+
+    #about .story .description ul li {
+        width: 310px;
+        text-align: left;
+    }
+
+    #about .story .description ol li {
+        text-align: center;
+    }
+
+    #about .story .description li {
+        padding-bottom: 0px;
+    }
+
+    .story .comingsoon {
+        padding-top: 75px;
+        font-size: 100px;
+    }
+
+    #home {
+        min-height: calc(100vh - 250px);
+    }
+
+    #about {
+        min-height: calc(100vh - 250px);
+    }
+
+    #blog {
+
+    }
+
+    #contact , #services {
+        padding: 20px;
+        min-height: calc(100vh - 250px);
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px 200px 200px;
+        grid-template-rows: 50px 50px 50px 50px 50px 50px;
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .page {
+        padding: 0;
+        min-height: calc(100vh - 205px);
+    }
+
+    #home .story .bio {
+        display: grid;
+        padding-top: 150px;
+    }
+
+    #home .story .bio #bio_name {
+        text-align: center;
+    }
+
+    .story .bio #bio_pic {
+        height: 150px;
+        width: 150px;
+        background: url("../imgs/joshua.jpg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        display: block;
+    }
+
+    #home .story .bio #bio_desc{
+        text-align: left;
+        padding-top: 5px;
+        padding-right: 40px;
+    }
+
+    .story .title {
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        width: 70%;
+        border-bottom: 1px solid black;
+    }
+    
+    .story * {
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .story .description {
+        padding: 10px;
+    }
+
+    .story .description * {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .story .description .chunk {
+        padding-bottom: 30px;
+    }
+
+    #about .story {
+        padding-top:5.5vh;
+        border-bottom: 1px solid black;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    #about .story .description ul, #about .story .description ol {
+        padding-left: 5px;
+        display: grid;
+    }
+
+    #about .story .description ul li:nth-child(1), .story .description ol li:nth-child(1) {
+        padding-top: 5px;
+    }
+
+    #about .story .description ol li:nth-child(1n+3) {
+        padding-top: 15px;
+    }
+
+    #about .story .description ol :not(li, h3) {
+        inline-size: 250px;
+    }
+
+    #about .story .description ul li {
+        padding-bottom: 5px;
+        width: 310px;
+        text-align: left;
+    }
+
+    #about .story .description ol li {
+        text-align: center;
+    }
+
+    #about .story .description li {
+        padding-bottom: 0px;
+    }
+
+    .story .comingsoon {
+        white-space: nowrap;
+        padding-top: 25px;
+        font-size: 75px;
+    }
+
+    #home {
+        min-height: calc(100vh - 205px);
+    }
+
+    #about {
+        min-height: calc(100vh - 205px);
+    }
+
+    #blog {
+        
+    }
+
+    #contact, #services {
+        padding: 20px;
+        min-height: calc(100vh - 205px);
+        display: grid;
+        grid-template-rows: 50px 50px 50px 50px 50px 50px;
+        grid-row-gap: 10px;
+        text-align: center;
+    }
+}
