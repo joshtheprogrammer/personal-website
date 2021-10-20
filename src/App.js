@@ -75,6 +75,11 @@ function App() {
                             Twitter
                           </a>
                         </li>
+                        <li className='subdropdown-item'>
+                          <a href='https://www.tiktok.com/@joshuahonguyen' target="_blank" class='subdropdown-links' rel="noreferrer">
+                            TikTok
+                          </a>
+                        </li>
                       </ul>
                     </li>
                   </ul>

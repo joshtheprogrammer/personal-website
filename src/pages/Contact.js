@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { AiOutlineInstagram, AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai"
-import { SiRoblox } from "react-icons/si"
+import { SiRoblox, SiTiktok } from "react-icons/si"
 import { MdAlternateEmail } from "react-icons/md"
 
 import "./Pages.css"
@@ -18,6 +18,9 @@ const Contact = () => {
             </a>
             <a href='https://www.twitter.com/joshuahonguyen' target="_blank" rel="noreferrer">
                 Twitter <br/> <AiOutlineTwitter id="twittericon"/>
+            </a>
+            <a href='https://www.tiktok.com/@joshuahonguyen' target="_blank" rel="noreferrer">
+                TikTok <br/> <SiTiktok id="tiktokicon"/>
             </a>
         </div>
     )
