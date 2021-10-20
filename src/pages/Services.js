@@ -6,7 +6,7 @@ const Services = () => {
     document.title = "Services";
     return (
         <div id="services" class="page">
-            <a href='https://www.trash2things.com' target="_blank">
+            <a href='https://www.trash2things.com' target="_blank" rel="noreferrer">
                 Trash2Things (coming soon)
             </a>
         </div>

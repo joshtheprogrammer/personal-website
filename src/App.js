@@ -43,7 +43,7 @@ function App() {
                   </Link>
                   <ul class='dropdown-menu'>
                     <li className='dropdown-item'>
-                      <a href='https://www.trash2things.com' target="_blank" className='dropdown-links'>
+                      <a href='https://www.trash2things.com' target="_blank" className='dropdown-links' rel="noreferrer">
                         Trash2Things (coming soon)
                       </a>
                     </li>
@@ -61,17 +61,17 @@ function App() {
                       </Link>
                       <ul class='subdropdown-menu'>
                         <li className='subdropdown-item'>
-                          <a href='https://www.instagram.com/joshuahonguyen' target="_blank" class='subdropdown-links'>
+                          <a href='https://www.instagram.com/joshuahonguyen' target="_blank" class='subdropdown-links' rel="noreferrer">
                             Instagram
                           </a>
                         </li>
                         <li className='subdropdown-item'>
-                          <a href='https://www.linkedin.com/in/joshuahonguyen/' target="_blank" class='subdropdown-links'>
+                          <a href='https://www.linkedin.com/in/joshuahonguyen/' target="_blank" class='subdropdown-links' rel="noreferrer">
                             LinkedIn
                           </a>
                         </li>
                         <li className='subdropdown-item'>
-                          <a href='https://www.twitter.com/joshuahonguyen' target="_blank" class='subdropdown-links'>
+                          <a href='https://www.twitter.com/joshuahonguyen' target="_blank" class='subdropdown-links' rel="noreferrer">
                             Twitter
                           </a>
                         </li>

@@ -176,5 +176,47 @@
   }
 }
 
+@media only screen and (max-width: 350px) {
+  .header {
+    font-size: 12px;
+  }
+
+  .nav-item {
+    font-size: 12px;
+  }
+
+  body {
+    width: 106%;
+  }
+
+  .main {
+    height: 75vh
+  }
+
+  .navdrop-item {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .header {
+    font-size: 12px;
+  }
+
+  .nav-item, .navdrop-item {
+    font-size: 12px;
+  }
+
+  body {
+    width: 122%;
+  }
+
+  .main {
+    height: 95vh
+  }
+
+
+}
+
 /*!!prevent zooming problems*/
 
