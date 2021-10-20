@@ -111,10 +111,10 @@
     }
 
     #about .story {
-        padding-top:5vh;
+        padding-top:2.5vh;
         border-bottom: 1px solid black;
         width: 600px;
-        margin-left: 30%;
+        margin-left: 28%;
     }
 
     #about .story .description ul, .story .description ol {
