@@ -5,7 +5,7 @@
   }
   .footer {
     height: 2rem; 
-    padding-top: 10px;
+    padding-top: 12px;
     text-align: center;
     background-color: #999;
 }
@@ -16,8 +16,8 @@
     font-size: 16px;
   }
   .footer {
-    height: 2rem; 
-    padding-top: 5px;
+    height: 1.5rem; 
+    padding-top: 12px;
     text-align: center;
     background-color: #999;
 }
