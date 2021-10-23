@@ -34,7 +34,7 @@ function App() {
   useEffect(() => {
     if (Q) {
       let quo = Q[Math.floor(Math.random() * Q.length)];
-      while (quo.quoteText.split(' ').length >= 15) {
+      while (quo.quoteText.split(' ').length > 8) {
         quo = Q[Math.floor(Math.random() * Q.length)];
       }
       setQuote(quo);
