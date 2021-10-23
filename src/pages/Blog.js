@@ -4,6 +4,7 @@ import "./Pages.css"
 
 const Blog = () => {
     document.title = "Blog";
+    
     return (
         <div id="blog" class="page">
             <div class="story">

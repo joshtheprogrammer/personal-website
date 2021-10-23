@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
 import { AiFillCaretDown } from 'react-icons/ai'
 
 import './App.css';
@@ -12,9 +11,36 @@ import Blog from './pages/Blog'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
 
+import Foot from './components/foot'
+
+let quoteURL = "https://raw.githubusercontent.com/JamesFT/Database-Quotes-JSON/master/quotes.json"
+const useFetch = url => {
+  const [data, setData] = useState(null);
+  
+  async function fetchData() {
+    const response = await fetch(url);
+    const json = await response.json();
+    setData(json);
+  }
+
+  useEffect(() => { fetchData() }, [url]);
+  return data;
+};
+
 function App() {
-  const [quote, setQuote] = useState("");
-  const [author, setAuthor] = useState("");
+  const Q = useFetch(quoteURL);
+  const [quote, setQuote] = useState({quoteText: '', quoteAuthor: ''});
+
+  useEffect(() => {
+    if (Q) {
+      let quo = Q[Math.floor(Math.random() * Q.length)];
+      while (quo.quoteText.split(' ').length >= 15) {
+        quo = Q[Math.floor(Math.random() * Q.length)];
+      }
+      setQuote(quo);
+    }
+  }, [Q]);
+  
   return (
       <Router>
         <div class="header">
@@ -95,9 +121,7 @@ function App() {
           <Route path="/contact" component={Contact}/>
         </div>
         
-        <div class="footer">
-        <b>2021</b>
-        </div>
+        <Foot quote={quote.quoteText} author={quote.quoteAuthor}/>
       </Router>
   );
 }

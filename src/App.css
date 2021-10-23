@@ -166,14 +166,6 @@
     min-height: calc(100vh - 210px);
     background-color: whitesmoke;
   }
-
-  /*footer container*/
-  .footer {
-    height: 1.5rem; 
-    padding: 10px;
-    text-align: center;
-    background-color: #999;
-  }
 }
 
 @media only screen and (max-width: 350px) {

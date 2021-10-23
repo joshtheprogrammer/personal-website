@@ -5,8 +5,6 @@ import "./Pages.css"
 const About = () => {
     document.title = "About";
 
-    const [age, setAge] = useState(21);
-
     return (
         <div id="about" class="page">
             <div class="story">
