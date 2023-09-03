@@ -4,6 +4,12 @@
   animation: typing 1s steps(75, end);
 }
 
+.animationMobile {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: typing .5s steps(75, end);
+}
+
 /* The typing effect */
 @keyframes typing {
   from { width: 0% }

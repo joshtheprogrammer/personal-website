@@ -1,13 +1,22 @@
 window.addEventListener('load', function() {
 	document.body.style.backgroundColor = "black";
+
+	var isMobile = navigator.userAgent.indexOf( "Mobile" ) !== -1 || navigator.userAgent.indexOf( "iPhone" ) !== -1 || navigator.userAgent.indexOf( "Android" ) !== -1 || navigator.userAgent.indexOf( "Windows Phone" ) !== -1;
+
 	var terminal = document.createElement('div');
-	terminal.style.fontFamily = "RobotoMono";
 	terminal.style.fontSize = "20px";
+	if (isMobile) {
+		terminal.style.fontSize = "12px";
+	}
+	terminal.style.fontFamily = "RobotoMono";
+
 	terminal.style.background = window.getComputedStyle(document.body).background;
 	terminal.style.color = "yellow";
+
 	document.body.appendChild(terminal);
 	
 	var output = document.createElement('div');
+	output.style.overflow = "wrap";
 
 	let time = 0;
 
@@ -23,11 +32,33 @@ window.addEventListener('load', function() {
 	input.style.border = "none";
 	input.style.outline = "none";
 	input.style.display = "inline";
-	input.style.width = "75%";
+	input.style.width = "25%";
+	if (isMobile) {
+		input.style.width = "40%";
+	}
+
+
+	function animationSort(obj) {
+		if (isMobile) {
+			obj.classList.add("animationMobile");
+		}
+		else {
+			obj.classList.add("animation");
+		}
+	}
+
+	function animationRemove(obj) {
+		if (isMobile) {
+			obj.classList.remove("animationMobile");
+		}
+		else {
+			obj.classList.remove("animation");
+		}
+	}
 
 	var userID = document.createElement('div');
 	userID.innerHTML = "[visitor@joshuahonguyen.com ~]$ ";
-	userID.classList.add("animation");
+	animationSort(userID)
 
 
 	time += 300;
@@ -37,7 +68,7 @@ window.addEventListener('load', function() {
 
 	time += 500;
 	setTimeout(function() {
-		intro.classList.remove("animation");
+		animationRemove(intro);
 		userID.style.display = "inline";
 		terminal.appendChild(input);
 		input.focus()
@@ -144,7 +175,7 @@ window.addEventListener('load', function() {
 						if (x == prompt.length-1) {
 							input.disabled = false;
 							input.focus()
-							pList.forEach(p => {pList.forEach(p=>{p.classList.remove("animation")})})
+							pList.forEach(p => {pList.forEach(p=>{animationRemove(p)})})
 						}
 						window.scrollTo(0, document.body.offsetHeight);
 
@@ -173,7 +204,7 @@ window.addEventListener('load', function() {
 							extra = 0;
 							input.disabled = false;
 							input.focus();
-							pList.forEach(p => {pList.forEach(p=>{p.classList.remove("animation")})})
+							pList.forEach(p => {pList.forEach(p=>{animationRemove(p)})})
 						}
 						window.scrollTo(0, document.body.offsetHeight);
 					}, (x*250)+extra)
@@ -189,7 +220,7 @@ window.addEventListener('load', function() {
 				input.disabled = true;
 				p = paragraph(name + ": command not found", true)
 				setTimeout(function() {
-					p.classList.remove("animation");
+					animationRemove(p);
 
 					input.disabled = false;
 					input.focus();
@@ -253,7 +284,7 @@ window.addEventListener('load', function() {
 		}
 
 		if (animation) {
-			paragraph.classList.add("animation");
+			animationSort(paragraph);
 		}
 		output.appendChild(paragraph);
 		return paragraph;
